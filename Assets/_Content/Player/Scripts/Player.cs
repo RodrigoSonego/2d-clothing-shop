@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
 	[SerializeField] float moveSpeed;
 	[SerializeField] int money;
+	[Space]
+	[SerializeField] PlayerAnimations playerAnimation;
 
 	private PlayerInputActions input;
 	private Rigidbody2D rb;
@@ -51,6 +53,8 @@ public class Player : MonoBehaviour
 
 		Vector2 moveDirection = input.Player.Move.ReadValue<Vector2>();
 		rb.velocity = moveDirection * moveSpeed;
+
+		playerAnimation.UpdateAnimation(moveDirection);
 	}
 
 	public void SetCanInteract(bool canInteract)
