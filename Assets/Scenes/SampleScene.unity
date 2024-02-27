@@ -955,10 +955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shop
       objectReference: {fileID: 0}
-    - target: {fileID: 3342042786917784818, guid: 54deb6a96b24e4844b8763ee7f3c3b3a, type: 3}
-      propertyPath: itemSprite
-      value: 
-      objectReference: {fileID: -39075883, guid: 9bc18e07c82a1ec4faf70c4bb8180d62, type: 3}
+    - target: {fileID: 3342042786737217869, guid: 54deb6a96b24e4844b8763ee7f3c3b3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3342042786917784830, guid: 54deb6a96b24e4844b8763ee7f3c3b3a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -991,10 +991,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4302954656935455206, guid: 54deb6a96b24e4844b8763ee7f3c3b3a, type: 3}
-      propertyPath: itemSprite
-      value: 
-      objectReference: {fileID: -557470714, guid: 9bc18e07c82a1ec4faf70c4bb8180d62, type: 3}
     - target: {fileID: 4302954656935455210, guid: 54deb6a96b24e4844b8763ee7f3c3b3a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1011,10 +1007,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4955567438596997381, guid: 54deb6a96b24e4844b8763ee7f3c3b3a, type: 3}
-      propertyPath: itemSprite
-      value: 
-      objectReference: {fileID: 571621824, guid: 9bc18e07c82a1ec4faf70c4bb8180d62, type: 3}
     - target: {fileID: 4955567438596997385, guid: 54deb6a96b24e4844b8763ee7f3c3b3a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

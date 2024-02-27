@@ -5,10 +5,7 @@ using TMPro;
 [RequireComponent(typeof(Toggle))]
 public class ShopItem : MonoBehaviour
 {
-	[SerializeField] ItemType type;
-	[SerializeField] string itemName;
-	[SerializeField] int price;
-	[SerializeField] Sprite itemSprite;
+	[SerializeField] Item item;
 	
 	[Space]
 	[SerializeField] Image itemImage;
@@ -25,20 +22,20 @@ public class ShopItem : MonoBehaviour
 	{
 		toggle = GetComponent<Toggle>();
 
-		nameText.text = itemName;
-		priceText.text = price.ToString();
-		itemImage.sprite = itemSprite;
+		nameText.text = item.ItemName;
+		priceText.text = item.Value.ToString();
+		itemImage.sprite = item.Sprite;
 	}
 
 	public ItemType GetItemType()
 	{
-		return type;
+		return item.Type;
 	}
 
 	public Item SellItem()
 	{
 		IsSold = true;
-		return new Item(type, itemImage.sprite, itemName, price);
+		return item;
 	}
 
 	public void Disable()
