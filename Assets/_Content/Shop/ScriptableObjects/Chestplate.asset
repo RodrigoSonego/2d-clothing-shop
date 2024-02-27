@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chestplate
   m_EditorClassIdentifier: 
   type: 0
-  spriteIcon: {fileID: 1324683459, guid: 9bc18e07c82a1ec4faf70c4bb8180d62, type: 3}
+  spriteIcon: {fileID: -39075883, guid: 9bc18e07c82a1ec4faf70c4bb8180d62, type: 3}
   itemName: Chestplate
   value: 500
   texture: {fileID: 2800000, guid: b2da54c055e61644ea0595b5bdbff64b, type: 3}

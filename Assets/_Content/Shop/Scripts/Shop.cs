@@ -7,7 +7,14 @@ public class Shop : MonoBehaviour
 {
 	[SerializeField] List<ShopItem> items;
 	[SerializeField] Button buyButton;
+	[SerializeField] Button sellButton;
 	[SerializeField] Button cancelButton;
+
+	[SerializeField] RectTransform buyPanel;
+	[SerializeField] RectTransform sellPanel;
+
+	[SerializeField] Button buyModeButton;
+	[SerializeField] Button sellModeButton;
 
 	private ShopItem selectedItem;
 
@@ -22,7 +29,13 @@ public class Shop : MonoBehaviour
 	private void Start()
 	{
 		buyButton.onClick.AddListener(BuyItem);
+		sellButton.onClick.AddListener(SellItem);
 		cancelButton.onClick.AddListener(CloseShop);
+
+		buyModeButton.onClick.AddListener(SwitchToBuyMode);
+		sellModeButton.onClick.AddListener(SwitchToSellMode);
+
+		SwitchToBuyMode();
 	}
 
 	public void ShowShop()
@@ -75,10 +88,33 @@ public class Shop : MonoBehaviour
 
 	private void BuyItem()
 	{
-		Item item = selectedItem.SellItem();
+		Item item = selectedItem.MakeSale();
 		PlayerController.Instance.AddOwnedItem(item);
 
 		RefreshItems();
+	}
+
+	private void SellItem()
+	{
+		Item item = selectedItem.MakeSale();
+		PlayerController.Instance.RemoveOwnedItem(item);
+
+		RestockItem(item);
+
+		Destroy(selectedItem.gameObject);
+
+		RefreshItems();
+	}
+
+	private void RestockItem(Item item)
+	{
+		foreach(ShopItem shopItem in items)
+		{
+			if (item == shopItem.item)
+			{
+				shopItem.Restock();
+			}
+		}
 	}
 
 	private void CloseShop()
@@ -87,5 +123,45 @@ public class Shop : MonoBehaviour
 		gameObject.SetActive(false);
 
 		OnShopClose();
+	}
+
+	private void SwitchToBuyMode()
+	{
+		LightModeButton(buyModeButton);
+		FadeModeButton(sellModeButton);
+
+		buyPanel.gameObject.SetActive(true);
+		sellPanel.gameObject.SetActive(false);
+
+		buyButton.gameObject.SetActive(true);
+		sellButton.gameObject.SetActive(false);
+	}
+
+	private void SwitchToSellMode()
+	{
+		LightModeButton(sellModeButton);
+		FadeModeButton(buyModeButton);
+
+		buyPanel.gameObject.SetActive(false);
+		sellPanel.gameObject.SetActive(true);
+
+		buyButton.gameObject.SetActive(false);
+		sellButton.gameObject.SetActive(true);
+	}
+
+	private void LightModeButton(Button button)
+	{
+		Color originalColor = button.targetGraphic.color;
+		Color newColor = new(originalColor.r, originalColor.g, originalColor.b, 1f);
+
+		button.targetGraphic.color = newColor;
+	}
+
+	private void FadeModeButton(Button button)
+	{
+		Color originalColor = button.targetGraphic.color;
+		Color newColor = new(originalColor.r,originalColor.g, originalColor.b, 0.75f);
+
+		button.targetGraphic.color = newColor;
 	}
 }

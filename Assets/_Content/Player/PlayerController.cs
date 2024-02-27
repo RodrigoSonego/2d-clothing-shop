@@ -15,11 +15,11 @@ public class PlayerController : MonoBehaviour
 	public static PlayerController Instance;
 	public event Action Interact;
 
-	List<Item> ownedItems = new List<Item>();
+	public List<Item> ownedItems { get; private set; } = new List<Item>();
 
 	void Start()
 	{
-		if (Instance == null) { Instance = this; }
+		if (!Instance) { Instance = this; }
 
 		rb = GetComponent<Rigidbody2D>();
 		input = new PlayerInputActions();
@@ -58,6 +58,11 @@ public class PlayerController : MonoBehaviour
 	public void AddOwnedItem(Item item)
 	{
 		ownedItems.Add(item);
+	}
+
+	public void RemoveOwnedItem(Item item)
+	{
+		ownedItems.Remove(item);
 	}
 
 	public void SetCanMove(bool canMove)

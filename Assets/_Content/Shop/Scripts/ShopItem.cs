@@ -5,7 +5,7 @@ using TMPro;
 [RequireComponent(typeof(Toggle))]
 public class ShopItem : MonoBehaviour
 {
-	[SerializeField] Item item;
+	[SerializeField] public Item item;
 	
 	[Space]
 	[SerializeField] Image itemImage;
@@ -22,9 +22,7 @@ public class ShopItem : MonoBehaviour
 	{
 		toggle = GetComponent<Toggle>();
 
-		nameText.text = item.ItemName;
-		priceText.text = item.Value.ToString();
-		itemImage.sprite = item.Sprite;
+		RefreshItem();
 	}
 
 	public ItemType GetItemType()
@@ -32,7 +30,7 @@ public class ShopItem : MonoBehaviour
 		return item.Type;
 	}
 
-	public Item SellItem()
+	public Item MakeSale()
 	{
 		IsSold = true;
 		return item;
@@ -42,6 +40,23 @@ public class ShopItem : MonoBehaviour
 	{
 		toggle.interactable = false;
 		fadeLayer.gameObject.SetActive(true);
+	}
+
+	public void RefreshItem()
+	{
+		if (item == null) { return; }
+
+		nameText.text = item.ItemName;
+		priceText.text = item.Value.ToString();
+		itemImage.sprite = item.Sprite;
+	}
+
+	public void Restock()
+	{
+		IsSold = false;
+
+		toggle.interactable = true;
+		fadeLayer.gameObject.SetActive(false);
 	}
 
 }

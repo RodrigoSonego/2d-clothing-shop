@@ -305,7 +305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 55.600006, y: 0.0000038146973}
+  m_AnchoredPosition: {x: 55.600006, y: 0.0000076293945}
   m_SizeDelta: {x: 55, y: -28.951}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &795982791708049131
@@ -386,8 +386,8 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 640.9454, y: 81.3271}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -501,13 +501,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b43555cd1e1f724183a2639a10c8ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  itemName: Chestplate
-  price: 500
+  item: {fileID: 0}
   itemImage: {fileID: 795982791708049128}
   nameText: {fileID: 795982791436212060}
   priceText: {fileID: 795982790727257923}
-  toggle: {fileID: 795982791769454125}
   fadeLayer: {fileID: 9174028170481347293}
 --- !u!1 &7928706544330033148
 GameObject:
