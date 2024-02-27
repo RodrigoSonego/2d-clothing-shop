@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -13,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
 	public static PlayerController Instance;
 	public event Action Interact;
+
+	List<Item> ownedItems = new List<Item>();
 
 	void Start()
 	{
@@ -50,5 +53,15 @@ public class PlayerController : MonoBehaviour
 	public void SetCanInteract(bool canInteract)
 	{
 		this.canInteract = canInteract;
+	}
+
+	public void AddOwnedItem(Item item)
+	{
+		ownedItems.Add(item);
+	}
+
+	public void SetCanMove(bool canMove)
+	{
+		this.canMove = canMove;
 	}
 }
