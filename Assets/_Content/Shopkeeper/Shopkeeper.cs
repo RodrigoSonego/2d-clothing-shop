@@ -17,6 +17,7 @@ public class Shopkeeper : MonoBehaviour
 	private void FinishInteraction()
 	{
 		Player.Instance.SetCanMove(true);
+		GameUI.Instance.UpdateMoneyText(Player.Instance.GetMoneyOwned());
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -28,6 +29,7 @@ public class Shopkeeper : MonoBehaviour
 
 	private void OnTriggerExit2D(Collider2D collision)
 	{
-		Player.Instance.SetCanInteract(false) ;
+		Player.Instance.SetCanInteract(false);
+		Player.Instance.Interact -= OpenShop;
 	}
 }

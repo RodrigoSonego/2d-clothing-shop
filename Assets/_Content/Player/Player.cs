@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 	[SerializeField] float moveSpeed;
+	[SerializeField] int money;
 
 	private PlayerInputActions input;
 	private Rigidbody2D rb;
@@ -26,6 +27,8 @@ public class Player : MonoBehaviour
 
 		input.Player.Enable();
 		input.Player.Interact.started += OnInteractPressed;
+
+		GameUI.Instance.UpdateMoneyText(money);
 	}
 
 	private void OnInteractPressed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
@@ -68,5 +71,20 @@ public class Player : MonoBehaviour
 	public void SetCanMove(bool canMove)
 	{
 		this.canMove = canMove;
+	}
+
+	public int GetMoneyOwned()
+	{
+		return money;
+	}
+
+	public void DeductMoney(int amount)
+	{
+		money -= amount;
+	}
+
+	public void AddMoney(int amount)
+	{
+		money += amount;
 	}
 }

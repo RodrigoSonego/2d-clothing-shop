@@ -55,6 +55,7 @@ public class ShopItem : MonoBehaviour
 	{
 		IsSold = false;
 
+		gameObject.SetActive(true);
 		toggle.interactable = true;
 		fadeLayer.gameObject.SetActive(false);
 	}

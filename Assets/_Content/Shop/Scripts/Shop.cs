@@ -77,11 +77,16 @@ public class Shop : MonoBehaviour
 
 	private void RefreshItems()
 	{
-		foreach(ShopItem item in items)
+		foreach(ShopItem shopItem in items)
 		{
-			if(item.IsSold)
+			if(shopItem.item.Value > Player.Instance.GetMoneyOwned())
 			{
-				item.Disable();
+				shopItem.Disable();
+			}
+
+			if (shopItem.IsSold)
+			{
+				shopItem.gameObject.SetActive(false);
 			}
 		}
 	}
@@ -90,6 +95,10 @@ public class Shop : MonoBehaviour
 	{
 		Item item = selectedItem.MakeSale();
 		Player.Instance.AddOwnedItem(item);
+
+		Player.Instance.DeductMoney(item.Value);
+
+		GameUI.Instance.UpdateMoneyText(Player.Instance.GetMoneyOwned());
 
 		RefreshItems();
 	}
@@ -102,6 +111,10 @@ public class Shop : MonoBehaviour
 		RestockItem(item);
 
 		Destroy(selectedItem.gameObject);
+
+		Player.Instance.AddMoney(item.Value);
+
+		GameUI.Instance.UpdateMoneyText(Player.Instance.GetMoneyOwned());
 
 		RefreshItems();
 	}
