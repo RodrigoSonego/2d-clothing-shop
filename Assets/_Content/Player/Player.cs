@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController : MonoBehaviour
+public class Player : MonoBehaviour
 {
 	[SerializeField] float moveSpeed;
 
@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 	private bool canMove = true;
 	private bool canInteract;
 
-	public static PlayerController Instance;
+	public static Player Instance;
 	public event Action Interact;
 
 	public List<Item> ownedItems { get; private set; } = new List<Item>();

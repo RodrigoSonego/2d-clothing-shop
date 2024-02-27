@@ -16,18 +16,18 @@ public class Shopkeeper : MonoBehaviour
 
 	private void FinishInteraction()
 	{
-		PlayerController.Instance.SetCanMove(true);
+		Player.Instance.SetCanMove(true);
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		PlayerController.Instance.SetCanInteract(true);
+		Player.Instance.SetCanInteract(true);
 
-		PlayerController.Instance.Interact += OpenShop;
+		Player.Instance.Interact += OpenShop;
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)
 	{
-		PlayerController.Instance.SetCanInteract(false) ;
+		Player.Instance.SetCanInteract(false) ;
 	}
 }

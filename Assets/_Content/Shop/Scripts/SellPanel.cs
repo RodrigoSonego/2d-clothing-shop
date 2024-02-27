@@ -28,7 +28,7 @@ public class SellPanel : MonoBehaviour
 
 	private void PopulateList()
 	{
-		foreach (Item item in PlayerController.Instance.ownedItems)
+		foreach (Item item in Player.Instance.ownedItems)
 		{
 			ShopItem shopItem = Instantiate(shopItemPrefab, itemsParent.transform).GetComponent<ShopItem>();
 

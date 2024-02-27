@@ -89,7 +89,7 @@ public class Shop : MonoBehaviour
 	private void BuyItem()
 	{
 		Item item = selectedItem.MakeSale();
-		PlayerController.Instance.AddOwnedItem(item);
+		Player.Instance.AddOwnedItem(item);
 
 		RefreshItems();
 	}
@@ -97,7 +97,7 @@ public class Shop : MonoBehaviour
 	private void SellItem()
 	{
 		Item item = selectedItem.MakeSale();
-		PlayerController.Instance.RemoveOwnedItem(item);
+		Player.Instance.RemoveOwnedItem(item);
 
 		RestockItem(item);
 
