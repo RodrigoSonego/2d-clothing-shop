@@ -42,6 +42,8 @@ public class Shop : MonoBehaviour
 	{
 		gameObject.SetActive(true);
 		EnableGraphics();
+
+		GameUI.Instance.HideInventory();
 	}
 
 	private void EnableGraphics()
@@ -137,6 +139,7 @@ public class Shop : MonoBehaviour
 	{
 		HideGraphics();
 		gameObject.SetActive(false);
+		GameUI.Instance.ShowInventory();
 
 		OnShopClose();
 	}

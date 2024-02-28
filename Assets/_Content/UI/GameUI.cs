@@ -29,4 +29,14 @@ public class GameUI : MonoBehaviour
 	{
 		inventory.RemoveItem(item);
 	}
+
+	public void ShowInventory()
+	{
+		inventory.Show();
+	}
+
+	public void HideInventory()
+	{
+		inventory.Hide();
+	}
 }

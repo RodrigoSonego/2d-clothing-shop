@@ -76,7 +76,15 @@ public class Inventory : MonoBehaviour
 				slot.Clear();
 			}
 		}
+	}
 
-		
+	public void Hide()
+	{
+		gameObject.SetActive(false);
+	}
+
+	public void Show()
+	{
+		gameObject.SetActive(true);
 	}
 }
