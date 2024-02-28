@@ -69,12 +69,14 @@ public class Shop : MonoBehaviour
 			selectedItem = null;
 
 			buyButton.interactable = false;
+			sellButton.interactable = false;
 			return;
 		}
 
 		selectedItem = item;
 
 		buyButton.interactable = true;
+		sellButton.interactable = true;
 	}
 
 	private void RefreshItems()
@@ -114,7 +116,7 @@ public class Shop : MonoBehaviour
 
 		RestockItem(item);
 
-		Destroy(selectedItem.gameObject);
+		selectedItem.gameObject.SetActive(false);
 
 		Player.Instance.AddMoney(item.Value);
 
