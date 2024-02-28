@@ -13,4 +13,5 @@ public class Item : ScriptableObject
 	public Sprite Sprite { get { return spriteIcon; } }
 	public string ItemName { get { return itemName; } }
 	public int Value { get { return value; } }
+	public Texture2D Texture { get { return texture; } }
 }

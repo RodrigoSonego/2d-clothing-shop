@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 	public event Action Interact;
 
 	public List<Item> ownedItems { get; private set; } = new List<Item>();
+	public List<Item> equippedItems { get; private set; } = new List<Item>();
 
 	void Start()
 	{
@@ -45,6 +46,7 @@ public class Player : MonoBehaviour
 	void FixedUpdate()
 	{
 		Move();
+		playerAnimation.RenderItems(ownedItems);
 	}
 
 	private void Move()

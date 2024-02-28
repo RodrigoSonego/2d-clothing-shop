@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -4350,23 +4350,23 @@ TextureImporter:
       fbas_05shrt_shortshirt_00a_3: -322278520
       fbas_05shrt_shortshirt_00a_30: -1944625852
       fbas_05shrt_shortshirt_00a_118: 937351004
-      fbas_05shrt_shortshirt_00a_144: 829708557
-      fbas_05shrt_shortshirt_00a_135: -532456429
-      fbas_05shrt_shortshirt_00a_9: 228782850
       fbas_05shrt_shortshirt_00a_19: 1170446399
-      fbas_05shrt_shortshirt_00a_139: -799698118
-      fbas_05shrt_shortshirt_00a_191: -1365853745
-      fbas_05shrt_shortshirt_00a_65: 1408894272
+      fbas_05shrt_shortshirt_00a_9: 228782850
       fbas_05shrt_shortshirt_00a_71: -1445813845
-      fbas_05shrt_shortshirt_00a_126: -1009423873
       fbas_05shrt_shortshirt_00a_82: 798923004
-      fbas_05shrt_shortshirt_00a_119: 130873668
+      fbas_05shrt_shortshirt_00a_135: -532456429
+      fbas_05shrt_shortshirt_00a_126: -1009423873
+      fbas_05shrt_shortshirt_00a_65: 1408894272
       fbas_05shrt_shortshirt_00a_4: -1141912354
+      fbas_05shrt_shortshirt_00a_139: -799698118
+      fbas_05shrt_shortshirt_00a_119: 130873668
+      fbas_05shrt_shortshirt_00a_191: -1365853745
       fbas_05shrt_shortshirt_00a_69: 947149480
       fbas_05shrt_shortshirt_00a_84: -1768460816
       fbas_05shrt_shortshirt_00a_98: -743097431
       fbas_05shrt_shortshirt_00a_168: -1644478499
       fbas_05shrt_shortshirt_00a_194: 1887976059
+      fbas_05shrt_shortshirt_00a_144: 829708557
       fbas_05shrt_shortshirt_00a_186: 2094942664
       fbas_05shrt_shortshirt_00a_43: -118473895
       fbas_05shrt_shortshirt_00a_105: -901774862
@@ -4392,8 +4392,8 @@ TextureImporter:
       fbas_05shrt_shortshirt_00a_161: 980129043
       fbas_05shrt_shortshirt_00a_179: 1339195632
       fbas_05shrt_shortshirt_00a_6: -1380593341
-      fbas_05shrt_shortshirt_00a_42: -147548689
       fbas_05shrt_shortshirt_00a_26: -1658453822
+      fbas_05shrt_shortshirt_00a_42: -147548689
       fbas_05shrt_shortshirt_00a_167: -1195466640
       fbas_05shrt_shortshirt_00a_59: -971908192
       fbas_05shrt_shortshirt_00a_122: 1235057024
@@ -4467,9 +4467,9 @@ TextureImporter:
       fbas_05shrt_shortshirt_00a_77: -394577028
       fbas_05shrt_shortshirt_00a_23: -1065932540
       fbas_05shrt_shortshirt_00a_152: 1246822237
+      fbas_05shrt_shortshirt_00a_182: 763193773
       fbas_05shrt_shortshirt_00a_183: 540249382
       fbas_05shrt_shortshirt_00a_188: -162901631
-      fbas_05shrt_shortshirt_00a_182: 763193773
       fbas_05shrt_shortshirt_00a_107: 1884277053
       fbas_05shrt_shortshirt_00a_37: -996208843
       fbas_05shrt_shortshirt_00a_148: 133776002

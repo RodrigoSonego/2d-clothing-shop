@@ -49,7 +49,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -4268,8 +4268,8 @@ TextureImporter:
       fbas_03fot1_shoes_00a_139: 2017210965
       fbas_03fot1_shoes_00a_9: -442690834
       fbas_03fot1_shoes_00a_2: -177272157
-      fbas_03fot1_shoes_00a_26: 529386796
       fbas_03fot1_shoes_00a_39: -842349357
+      fbas_03fot1_shoes_00a_26: 529386796
       fbas_03fot1_shoes_00a_160: -1760537527
       fbas_03fot1_shoes_00a_111: -1867598194
       fbas_03fot1_shoes_00a_58: -1332046051
@@ -4278,16 +4278,16 @@ TextureImporter:
       fbas_03fot1_shoes_00a_51: -1048664042
       fbas_03fot1_shoes_00a_65: -1544392752
       fbas_03fot1_shoes_00a_33: 1469044126
-      fbas_03fot1_shoes_00a_35: -322021321
       fbas_03fot1_shoes_00a_83: -899135384
-      fbas_03fot1_shoes_00a_85: 968723188
+      fbas_03fot1_shoes_00a_35: -322021321
       fbas_03fot1_shoes_00a_127: 1072221154
       fbas_03fot1_shoes_00a_15: 1517554750
-      fbas_03fot1_shoes_00a_79: 963383352
-      fbas_03fot1_shoes_00a_132: -2102563879
-      fbas_03fot1_shoes_00a_118: -1587610439
-      fbas_03fot1_shoes_00a_189: -992049490
+      fbas_03fot1_shoes_00a_85: 968723188
       fbas_03fot1_shoes_00a_193: 1455139678
+      fbas_03fot1_shoes_00a_79: 963383352
+      fbas_03fot1_shoes_00a_189: -992049490
+      fbas_03fot1_shoes_00a_118: -1587610439
+      fbas_03fot1_shoes_00a_132: -2102563879
       fbas_03fot1_shoes_00a_161: -869475528
       fbas_03fot1_shoes_00a_31: 1897513328
       fbas_03fot1_shoes_00a_36: -1226508112
