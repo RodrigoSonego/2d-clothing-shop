@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
 
 	private void Move()
 	{
-		if (canMove == false) { return; }
+		if (canMove == false) { rb.velocity = Vector2.zero; return; }
 
 		Vector2 moveDirection = input.Player.Move.ReadValue<Vector2>();
 		rb.velocity = moveDirection * moveSpeed;
