@@ -37,6 +37,7 @@ public class PlayerAnimations : MonoBehaviour
 	public void RenderItems(List<Item> equippedItems)
 	{
 		Rect mainRect = spriteRenderer.sprite.textureRect;
+
 		foreach (var item in equippedItems)
 		{
 			Texture2D itemTex = item.Texture;
@@ -59,5 +60,27 @@ public class PlayerAnimations : MonoBehaviour
 					break;
 			}
 		}
+	}
+
+	public void ClearItemSprite(ItemType type)
+	{
+		switch (type)
+		{
+			case ItemType.UpperBody:
+				upperBodyRenderer.sprite = null;
+				break;
+			case ItemType.Leggings:
+				legsRenderer.sprite = null;
+				break;
+			case ItemType.Shoes:
+				shoesRenderer.sprite = null;
+				break;
+			case ItemType.Hat:
+				headRenderer.sprite = null;
+				break;
+			default:
+				break;
+		}
+
 	}
 }

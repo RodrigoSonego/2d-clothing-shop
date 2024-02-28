@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
 	void FixedUpdate()
 	{
 		Move();
-		playerAnimation.RenderItems(ownedItems);
+		playerAnimation.RenderItems(equippedItems);
 	}
 
 	private void Move()
@@ -67,6 +67,7 @@ public class Player : MonoBehaviour
 	public void AddOwnedItem(Item item)
 	{
 		ownedItems.Add(item);
+
 	}
 
 	public void RemoveOwnedItem(Item item)
@@ -92,5 +93,17 @@ public class Player : MonoBehaviour
 	public void AddMoney(int amount)
 	{
 		money += amount;
+	}
+
+	public void EquipItem(Item item)
+	{
+		equippedItems.Add(item);
+	}
+
+	public void UnequipItem(Item item)
+	{
+		equippedItems.Remove(item);
+
+		playerAnimation.ClearItemSprite(item.Type);
 	}
 }

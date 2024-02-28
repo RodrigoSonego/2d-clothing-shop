@@ -99,6 +99,7 @@ public class Shop : MonoBehaviour
 		Player.Instance.DeductMoney(item.Value);
 
 		GameUI.Instance.UpdateMoneyText(Player.Instance.GetMoneyOwned());
+		GameUI.Instance.AddItemToInventory(item);
 
 		RefreshItems();
 	}
@@ -107,6 +108,7 @@ public class Shop : MonoBehaviour
 	{
 		Item item = selectedItem.MakeSale();
 		Player.Instance.RemoveOwnedItem(item);
+		Player.Instance.UnequipItem(item);
 
 		RestockItem(item);
 
@@ -115,6 +117,7 @@ public class Shop : MonoBehaviour
 		Player.Instance.AddMoney(item.Value);
 
 		GameUI.Instance.UpdateMoneyText(Player.Instance.GetMoneyOwned());
+		GameUI.Instance.RemoveItemFromInventory(item);
 
 		RefreshItems();
 	}
